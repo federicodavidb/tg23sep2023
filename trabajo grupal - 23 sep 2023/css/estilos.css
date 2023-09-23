@@ -1,0 +1,175 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    /* Otros estilos para los enlaces, como color y efectos de hover */
+}
+
+
+/* Estilo para el título "marca" */
+#marca {
+    color: turquoise;
+    font-family: 'Courier New';
+    margin: 16px;
+    margin-right: 40px;
+}
+
+#formIngreso input {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+/* H E A D E R */
+header {
+    display: flex; /* Uso de flexbox */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+header p {
+    margin: 25px;
+}
+
+.botonHeader {
+    border-radius: 12px;
+    height: 22px;
+    margin: 0 20px;
+    padding: 2px 5px 2px 5px;
+    background-color: wheat;
+    color: darkcyan;
+}
+
+.botonHeader:hover {
+    box-shadow: 2px 2px 1px darkcyan;
+}
+
+
+/* N A V  */
+nav {
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+nav a:hover {
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+
+
+/* Estilo para la lista horizontal de navegación */
+.horizontal-list {
+    display: flex; /* Uso de flexbox para distribución */
+    justify-content: space-between; /* Distribuir elementos horizontalmente con espacio entre ellos */
+    align-items: center; /* Alinear verticalmente al centro */
+    background-color: whitesmoke; /* Color de fondo para destacar la lista */
+}
+
+/* Estilo para la lista de navegación en la lista horizontal */
+.horizontal-list ul {
+    list-style-type: none; /* Quitar viñetas de lista */
+    display: flex; /* Uso de flexbox para distribución */
+}
+
+/* Estilo para los elementos de la lista horizontal */
+.horizontal-list li {
+    margin-right: 20px; /* Espacio entre elementos */
+    padding-left: 40px;
+}
+
+/* Estilo para la caja de búsqueda */
+.busqueda {
+    border-radius: 20px; /* Radio de borde para la caja */
+    padding: 10px; /* Espacio interno */
+    background-color: wheat; /* Color de fondo */
+    margin: 10px; /* Margen exterior */
+}
+
+/* Estilo para el botón de búsqueda */
+.busquedaboton {
+    border: none; /* Quitar borde */
+    cursor: pointer; /* Cambiar cursor en hover */
+    transition: background-color 0.3s, border-radius 0.3s; /* Transiciones suaves */
+    margin: 10px; /* Margen exterior */
+    border-radius: 20px; /* Radio de borde */
+}
+
+/* Estilo para el botón de búsqueda en hover */
+.busquedaboton:hover {
+    background-color: gainsboro; /* Cambio de color de fondo */
+    padding: 12px 20px; /* Cambio de espaciado */
+}
+
+/* Estilo para el contenedor */
+.contenedor {
+    text-align: center;
+    background-color: beige;
+}
+
+/* Estilo para las secciones */
+.secciones {
+    display: flex; /* Uso de flexbox */
+    justify-content: space-around; /* Distribución equitativa de elementos */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para una sección */
+.seccion {
+    flex-basis: 30%; /* Ancho flexible */
+}
+
+
+/* M A I N*/
+
+main {
+    margin-top: 35px;
+}
+
+
+.contenedorProductos {
+    width: 82%;
+    height: auto;
+    margin: 12px auto;
+    overflow: auto; /* Agregado para manejar desbordamiento de productos */
+}
+
+.producto {
+    width: 200px;
+    height: 250px;
+    margin: 16px 17px; /* Margen en la izquierda y derecha */
+    float: left;
+}
+
+.producto img:hover {
+    border: 3px solid darkturquoise;
+}
+
+#prefooter {
+    background-color: turquoise;
+    height: 12px;
+}
+
+
+
+
+
+
+/* F O O T E R */
+footer {
+    background-color: blue; /* Color de fondo */
+    color: aliceblue; /* Color del texto */
+    height: 35px;
+    display: flex; /* Utiliza flexbox para centrar verticalmente */
+    align-items: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
