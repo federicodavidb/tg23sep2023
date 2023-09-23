@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="_bed7b0fd-5082-47a2-b0d6-5d5e0fc79b4d.ico">
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><h2 id="marca">Nombre</h2></a>
+        <form action="/buscar" method="get">
+            <input type="text" class="busqueda" name="q" placeholder="Buscar...">
+            <input type="submit" value="Buscar" class="busquedaboton">
+        </form>
+        <a href="registro.html"><p id="newuser" class="botonHeader">Hacete miembro</p></a>
+        <p id="login" class="botonHeader">Entrá a tu cuenta</p>
+        <a href="faq.html" ><p class="botonHeader">FAQ</p></a>
+
+
+        <table>
+            <tr>
+            <th colspan="3">Enlaces</th>
+            </tr>
+            <tr>
+                <th><a href="https://www.facebook.com/"><img src="img/Facebook_logo_36x36.svg.png" height="20px" width="20px" alt="face"></a></th>
+                <th><a href="https://twitter.com/"><img src="img/twitter-logo-60f963b117578-sej-552x488 (1).webp" height="20px" width="20px" alt="insta"></a></th>
+                <th><a href="https://www.instagram.com/"><img src="img/Instagram_logo_2016.svg.webp" height="20px" width="twitter" alt="face"></a></th>
+            </tr>
+
+        </table>
+        
+    </header>
+
+    <nav class="horizontal-list">
+        <ul>
+            <li>Casual</li>
+            <li>Jeans</li>
+            <li>Ropa de Deporte</li>
+            <li>Calzado</li>
+            <li>Ropa Formal</li>
+            <li>Accesorios</li>
+        </ul>
+    </nav>
+
+    <main></main>
+
+
+
+    <h1>Registro</h1>
+    <form id="formIngreso" action="">
+
+        <fieldset>
+        <legend>Datos personales</legend>
+        <p>
+        <label for="name">Ingresar nombre de usuario</label>
+        <input type="text" id="name" required placeholder="Usuario">
+        </p>
+
+        <p>
+        <label for="mail">Ingresar dirección de correo electrónico</label>
+        <input type="email" id="apellido" required placeholder="email">
+        </p>
+
+        <p>
+            <label for="pass">Ingresar contraseña</label>
+            <input type="password" id="pass" required placeholder="Contraseña">
+        </p>
+
+        <p>
+        <label for="born">Ingrese fecha de nacimiento</label>
+        <input type="date" id="born">
+        </p>
+
+
+        <label for="genero">Género</label>
+
+        <br>
+        <ul>
+        <li><input type="radio" name="mem" id="free" value="1">
+        <label for="">Femenino</label></li>
+
+        <li><input type="radio" name="mem" id="premium" value="2">
+        <label for="">Masculino</label></li>
+
+        <li><input type="radio" name="mem" id="premium+" value="3">
+        <label for="">No binario</label></li>
+    </ul>
+
+        <label for="zonageo">Región</label>
+        <select name="zona" id="zonageo">
+            <option value="1">Pampeana</option>
+            <option value="2">Noroeste Argentino</option>
+            <option value="3">Patagónica</option>
+            <option value="4">Cuyo</option>
+            <option value="5">Mesopotamia</option>
+            <option value="6">Chaqueña/Litoral</option>
+        </select>
+        <br>
+        <br>
+        <label for="disponible">Intereses</label>
+
+        <ul>
+
+            <li>
+                <input type="checkbox" id="sostenible">
+                <label for="sostenible">Moda sostenible</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="etnica">
+                <label for="etnica">Ropa étnica o artesanal</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="depor">
+                <label for="depor">Ropa de deportes</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="formal">
+                <label for="formal">Ropa formal</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="niños">
+                <label for="niños">Ropa para niños</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="niños">
+                <label for="niños">Ropa de temporada</label>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="big">   
+                <label for="big">Ropa para talla grande</label>
+            </li>
+
+            <li>
+                <input type="checkbox" id="mayor">
+                <label for="mayor">Compra-venta mayorista</label>
+            </li>
+
+        </ul>
+
+    </fieldset>    
+<p>
+
+    <button type="submit">Enviar</button>
+</p>
+    </form>
+</body>
+</html>
