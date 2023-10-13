@@ -50,6 +50,11 @@ header p {
     box-shadow: 2px 2px 1px darkcyan;
 }
 
+header a img {
+    padding-left: 4px;
+    padding-top:  2px;
+}
+
 
 /* N A V  */
 nav {
@@ -172,4 +177,32 @@ footer {
     align-items: center; /* Centra verticalmente el contenido */
     text-align: center; /* Centra horizontalmente el texto */
 }
+
+
+
+
+/* R E G I S T R O */
+
+#contenedorRegistro {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+#formIngreso {
+    width: 35%;
+    display: flex;
+    text-align: justify;
+    align-items:center;
+}
+
+#botonEnviar {
+    width: 14%;
+    height: 9%;
+    background-color: lightblue;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
 
