@@ -10,7 +10,6 @@ body, html {
 
 a {
     text-decoration: none; /* Elimina el subrayado */
-    /* Otros estilos para los enlaces, como color y efectos de hover */
 }
 
 
@@ -39,7 +38,7 @@ header p {
 
 .botonHeader {
     border-radius: 12px;
-    height: 22px;
+    height: 26px;
     margin: 0 20px;
     padding: 2px 5px 2px 5px;
     background-color: wheat;
@@ -50,10 +49,50 @@ header p {
     box-shadow: 2px 2px 1px darkcyan;
 }
 
-header a img {
-    padding-left: 4px;
-    padding-top:  2px;
+
+
+/* Estilo para la caja de búsqueda */
+.busqueda {
+    border-radius: 20px; /* Radio de borde para la caja */
+    padding: 10px; /* Espacio interno */
+    background-color: wheat; /* Color de fondo */
+    margin: 10px; /* Margen exterior */
 }
+
+/* Estilo para el botón de búsqueda */
+.busquedaboton {
+    border: none; /* Quitar borde */
+    cursor: pointer; /* Cambiar cursor en hover */
+    transition: background-color 0.3s, border-radius 0.3s; /* Transiciones suaves */
+    margin: 10px; /* Margen exterior */
+    border-radius: 20px; /* Radio de borde */
+    height: 32px;
+    width: 70px;
+}
+
+/* Estilo para el botón de búsqueda en hover */
+.busquedaboton:hover {
+    background-color: gainsboro; /* Cambio de color de fondo */
+}
+
+
+/* Estilo específico para dispositivos móviles (ancho de pantalla < 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila elementos uno encima del otro en dispositivos móviles */
+        align-items: center;
+    }
+
+    header form {
+        margin: 10px 0; /* Cambiar el margen para la barra de búsqueda */
+    }
+
+    header p, header a {
+        margin: 5px;
+    }
+}
+
+
 
 
 /* N A V  */
@@ -83,6 +122,7 @@ nav a:hover {
 .horizontal-list ul {
     list-style-type: none; /* Quitar viñetas de lista */
     display: flex; /* Uso de flexbox para distribución */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
 /* Estilo para los elementos de la lista horizontal */
@@ -91,33 +131,53 @@ nav a:hover {
     padding-left: 40px;
 }
 
-/* Estilo para la caja de búsqueda */
-.busqueda {
-    border-radius: 20px; /* Radio de borde para la caja */
-    padding: 10px; /* Espacio interno */
-    background-color: wheat; /* Color de fondo */
-    margin: 10px; /* Margen exterior */
+/* Estilo para la lista de navegación en dispositivos móviles */
+@media (max-width: 768px) {
+    .horizontal-list ul {
+        flex-direction: column; /* Mostrar elementos en una columna */
+        text-align: center; /* Centrar el texto horizontalmente */
+    }
+    .horizontal-list li {
+        margin: 10px 0; /* Espacio entre elementos arriba y abajo */
+        display: inline; /* Mostrar elementos en línea para que dos estén en la misma fila */
+    }
 }
 
-/* Estilo para el botón de búsqueda */
-.busquedaboton {
-    border: none; /* Quitar borde */
-    cursor: pointer; /* Cambiar cursor en hover */
-    transition: background-color 0.3s, border-radius 0.3s; /* Transiciones suaves */
-    margin: 10px; /* Margen exterior */
-    border-radius: 20px; /* Radio de borde */
+/* Estilo para la lista de navegación en dispositivos móviles y tablets */
+@media (max-width: 1024px) {
+    .horizontal-list ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .horizontal-list li {
+        margin: 10px;
+        text-align: center;
+        flex-basis: calc(50% - 20px); /* 50% con margen para 2 elementos por fila */
+    }
 }
 
-/* Estilo para el botón de búsqueda en hover */
-.busquedaboton:hover {
-    background-color: gainsboro; /* Cambio de color de fondo */
-    padding: 12px 20px; /* Cambio de espaciado */
-}
+
+
+
+
+
+
+
+
+
 
 /* Estilo para el contenedor */
 .contenedor {
     text-align: center;
     background-color: beige;
+    font-family: 'Snippet', serif;
+}
+
+.contenedor iframe {
+    padding: 20px;
+    max-width: 100%;
 }
 
 /* Estilo para las secciones */
@@ -130,6 +190,19 @@ nav a:hover {
 /* Estilo para una sección */
 .seccion {
     flex-basis: 30%; /* Ancho flexible */
+}
+
+/* Media query para tablet y dispositivos más pequeños */
+@media (max-width: 768px) {
+    .secciones {
+        flex-direction: column; /* Cambiar la dirección de flex a columna */
+        align-items: center; /* Centrar verticalmente en dispositivos más pequeños */
+    }
+
+    .seccion {
+        flex-basis: 100%; /* Ocupar todo el ancho disponible en dispositivos más pequeños */
+        margin-bottom: 20px; /* Añadir margen entre las secciones */
+    }
 }
 
 
@@ -152,16 +225,47 @@ main {
     height: 250px;
     margin: 16px 17px; /* Margen en la izquierda y derecha */
     float: left;
+    position: relative;
+
 }
 
-.producto img:hover {
+.producto img {
+    display: block;
+    transition: border 0.1s; /* Efecto de transición */
+}
+
+
+.producto:hover img {
     border: 3px solid darkturquoise;
 }
 
-#prefooter {
-    background-color: turquoise;
-    height: 12px;
+.producto img, .producto button {
+    cursor: pointer;
 }
+
+
+
+main img {
+    border-radius: 8%;
+}
+
+.producto button {
+    border-radius: 15px;
+    width: 45%;
+    height: 25px;
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del botón */
+    right: 10px; /* Ajusta la posición horizontal del botón */
+    background-color: rgba(173, 216, 230, 0.85); /* lightblue con opacidad */
+    border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
 
 
 
@@ -169,13 +273,28 @@ main {
 
 
 /* F O O T E R */
+#prefooter {
+    background-color: turquoise;
+    height: 19px;
+}
+
+
 footer {
     background-color: blue; /* Color de fondo */
     color: aliceblue; /* Color del texto */
-    height: 35px;
+    height: auto;
     display: flex; /* Utiliza flexbox para centrar verticalmente */
     align-items: center; /* Centra verticalmente el contenido */
     text-align: center; /* Centra horizontalmente el texto */
+    font-size: small;
+    width: 100%;
+}
+
+footer p {
+    padding-left: 4%;
+}
+footer table {
+    padding-left: 2%;
 }
 
 
@@ -202,7 +321,3 @@ footer {
     color: darkblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
-
-
