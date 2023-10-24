@@ -38,9 +38,9 @@ header p {
 
 .botonHeader {
     border-radius: 12px;
-    height: 26px;
+    height: 36px;
     margin: 0 20px;
-    padding: 2px 5px 2px 5px;
+    padding: 7px 5px 2px 5px;
     background-color: wheat;
     color: darkcyan;
 }
@@ -76,6 +76,23 @@ header p {
 }
 
 
+/* API */
+#climaInfo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    color: black;
+    position: absolute;
+    right: 15px;
+}
+
+#climaInfo h3 {
+    position: absolute;
+    right: 100%;
+}
+
+
+
+
 /* Estilo específico para dispositivos móviles (ancho de pantalla < 768px) */
 @media screen and (max-width: 768px) {
     header {
@@ -89,6 +106,10 @@ header p {
 
     header p, header a {
         margin: 5px;
+    }
+    #climaInfo {
+        position: relative; /* Cambia la posición para dispositivos más pequeños */
+        width: 100%; /* Haz que ocupe el ancho completo */
     }
 }
 
@@ -305,6 +326,7 @@ footer table {
 #contenedorRegistro {
     display: flex;
     padding-bottom: 10px;
+    background-color: beige;
 }
 
 #formIngreso {
@@ -316,7 +338,32 @@ footer table {
 
 #botonEnviar {
     width: 14%;
-    height: 9%;
+    height: 13%;
+    background-color: lightblue;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* L O G   I N */
+.contLog {
+    width: 100%;
+    height: 550px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    margin: auto;
+    background-color: wheat;
+    align-items: center;
+}
+
+#botonEnviarIn {
+    width: 65px;
+    height: 26px;
     background-color: lightblue;
     color: darkblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -345,4 +392,6 @@ footer table {
     color: darkgreen;
     line-height: 1.9;
 }
+
+
 
